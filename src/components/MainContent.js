@@ -1,5 +1,5 @@
 import React from "react";
-import mainimage from "../assets/mainimage.png";
+import mainimage from "../assets/image4.png";
 import Topbarbuttons from "./Topbarbuttons";
 
 const MainContent = () => {

@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../assets/image2.png";
+import image from "../assets/image5.png";
 import Topbarbuttons from "./Topbarbuttons";
 
 const WhiteDiv = () => {
   return (
     <div className="w-100 whitediv justify-content-flex-end d-flex">
-      <div className="w-50 d-flex justify-content-center align-items-center">
+      <div className=" d-flex justify-content-center align-items-center">
         <div className="insidewhitediv">
           <h6>Lead smarter, sell better</h6>
           <h2>Manage Your Leads</h2>
@@ -18,7 +18,7 @@ const WhiteDiv = () => {
         </div>
       </div>
       <div>
-        <img className="img-responsive w-100" src={image} />
+        <img className="img-responsive" src={image} />
       </div>
     </div>
   );
