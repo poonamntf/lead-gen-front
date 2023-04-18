@@ -4,9 +4,9 @@ import Topbarbuttons from "./Topbarbuttons";
 
 const WhiteDiv = () => {
   return (
-    <div className="w-100 whitediv justify-content-flex-end d-flex">
-      <div className=" d-flex justify-content-center align-items-center">
-        <div className="insidewhitediv">
+    <div className=" flex-wrap whitediv justify-content-flex-end d-flex">
+      <div className="  col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center text-align-center align-items-center">
+        <div className="insidewhitediv mt-5">
           <h6>Lead smarter, sell better</h6>
           <h2>Manage Your Leads</h2>
           <p>
@@ -17,8 +17,8 @@ const WhiteDiv = () => {
           <Topbarbuttons />
         </div>
       </div>
-      <div>
-        <img className="img-responsive" src={image} />
+      <div className="d-flex flex-wrap justify-content-center whitedivleft">
+        <img src={image} />
       </div>
     </div>
   );

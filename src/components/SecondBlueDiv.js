@@ -17,8 +17,8 @@ const SecondBlueDiv = () => {
           ad minim veniam, quis nostrud equip ex ea commodo.
         </p>
       </div>
-      <div className="mt-5 bottomdiv d-flex justify-content-between">
-        <div className="d-flex innerdiv">
+      <div className="mt-5 bottomdiv d-flex flex-wrap justify-content-between">
+        <div className="d-flex mt-2 innerdiv">
           <img className="img-responsive" src={image2} />
           <div className="secondinnerdiv">
             <span>Landline</span>
@@ -26,7 +26,7 @@ const SecondBlueDiv = () => {
             <span>310-437-2766</span>
           </div>
         </div>
-        <div className="d-flex innerdiv">
+        <div className="d-flex mt-2 innerdiv">
           <img className="img-responsive" src={image1} />
           <div className="secondinnerdiv">
             <span>Mail</span>
@@ -35,7 +35,7 @@ const SecondBlueDiv = () => {
           </div>
         </div>
 
-        <div className="d-flex innerdiv">
+        <div className="d-flex mt-2 innerdiv">
           <img className="img-responsive" src={image3} />
           <div className="secondinnerdiv">
             <span>Address</span>

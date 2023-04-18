@@ -178,7 +178,7 @@ p {
 }
 
 .innerdiv {
-  width: 33%;
+  width: 300px;
   text-align: left;
 }
 
@@ -197,5 +197,31 @@ p {
   line-height: 34px;
   color: #cacdf5;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 8%;
+}
+
+.whitedivleft img {
+  width: 100%;
+}
+
+.whitedivright {
+  width: 650px;
+}
+
+.whitedivleft {
+  width: 650px;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.innerdiv img {
+  width: 24%;
+}
+
+.loginforminnerdiv {
+  width: 424px !important;
+  margin: 0 auto;
 }
