@@ -1,9 +1,22 @@
 @font-face {
   font-family: "Gilroy-Bold";
   src: url("../public/fonts/Gilroy-Bold.ttf") format("truetype");
-
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("../public/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("../public/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+
+/* Home Page */
 
 .demobutton {
   align-items: center;
@@ -212,16 +225,345 @@ p {
   width: 650px;
 }
 
+.innerdiv img {
+  width: 24%;
+}
+
+/* End Home page */
+
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
 }
 
-.innerdiv img {
-  width: 24%;
+/* User Login, Admin Login, Signup */
+
+.loginheadings {
+  font-family: "Gilroy-SemiBold";
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+  width: 60%;
 }
 
-.loginforminnerdiv {
-  width: 424px !important;
+.loginheadings h4 {
+  font-family: "Gilroy-SemiBold";
+  font-size: 28px;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+  color: #5f65ce;
+}
+
+.loginheadings h5 {
+  font-family: "Gilroy-SemiBold";
+  font-size: 28px;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+  color: black;
+}
+
+.loginforminnerdiv label.form-label {
+  font-family: "Gilroy-SemiBold";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  color: #272d37;
+}
+
+.loginforminnerdiv input {
+  font-family: "Gilroy-Medium";
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  letter-spacing: -0.1px;
+  color: #919ba7;
+}
+
+.logindiv {
+  display: flex;
+}
+
+.loginimage img {
+  width: 100%;
+}
+
+.loginlogo {
+  text-align: left;
+  width: 60%;
+}
+
+.columndiv {
+  height: 60%;
+}
+
+.loginforminnerdiv button {
+  width: 100%;
+  padding: 10px 12px;
+  gap: 6px;
+  background: #7c81e4;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+  border-radius: 10px;
+  border: none;
+}
+
+.forgotpassword {
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+  line-height: 22px;
+  color: #5f65ce;
+  text-decoration: none;
+}
+
+.loginleftdiv.d-flex.flex-column {
+  gap: 50px;
+}
+
+.d-flex.flex-column.columndiv.justify-content-start.align-items-center {
+  width: 100%;
+}
+
+.loginforminnerdiv.mt-3 {
+  width: 100%;
+}
+
+.loginforminnerdiv form {
   margin: 0 auto;
+  width: 60%;
+}
+
+.loginleftdiv.justify-content-start.col-lg-6.col-md-6.col-sm-12.col-xs-12.d-flex.align-items-center.flex-column {
+  justify-content: flex-start;
+}
+
+.loginimage img {
+  width: 75%;
+  float: right;
+}
+
+.colordiv {
+  width: 100%;
+  height: 100vh;
+  background-color: #7c81e4;
+}
+
+.loginsignupdiv {
+  width: 60%;
+  margin: 0 auto;
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  line-height: 20px;
+  color: #5f6369;
+}
+
+.loginsignupdiv a {
+  text-decoration: none !important;
+}
+
+/* End of User login, Admin Login and Register */
+
+/* Start of viewall */
+
+.bloc-tabs {
+  display: flex;
+  margin: 20px;
+  margin-left: 115px;
+}
+.tabs {
+  padding: 5px;
+  text-align: center;
+  height: 24px;
+  background: white;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  margin: 0 30px;
+  font-family: "Gilroy-SemiBold";
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #7e7e80;
+}
+.tabs:not(:last-child) {
+}
+
+.active-tabs {
+  background: white;
+  border-bottom: none;
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #5f65ce !important;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 1px);
+  height: 2px;
+  background: #5f65ce;
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+
+.active-content {
+  display: block !important;
+}
+
+.content.active-content {
+  padding: 0;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.arrowimage {
+  margin-right: 20px !important;
+}
+
+.dashboardmaintop {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.createcontactbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  gap: 6px;
+  background: #5f65ce !important;
+  border-radius: 10px;
+  border: none !important;
+}
+
+.importbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15.5px 20px;
+  gap: 6px;
+  border: 1px solid #5f65ce !important;
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  color: #5f65ce !important;
+  margin-right: 20px;
+}
+
+select.form-control.form-select {
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+
+  color: #a0a0a0;
+  margin-top: 20px;
+}
+
+.modal-footer {
+  justify-content: center !important;
+}
+
+select.form-control.form-select {
+  width: 80%;
+  margin: 15px auto;
+}
+
+label.sc-beqWaB.ewqTBN {
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+}
+
+label.sc-beqWaB.ewqTBN {
+  border: 2px dashed #5f65ce !important;
+}
+
+.importbuttonsecond button.btn.btn-primary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 35.5px;
+  gap: 5px;
+  background: #5f65ce;
+  border-radius: 6px;
+}
+.tablediv {
+  width: 100%;
+}
+
+.tablediv table {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.tablediv table td {
+  padding: 10px;
+}
+
+.tablediv table td img {
+  margin-right: 20px;
+}
+
+.booked {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 14px 13px 29px;
+  gap: 23px;
+  background: #b8fcd8;
+  border-radius: 40px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: "Gilroy-SemiBold";
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  color: #05703c;
+}
+
+.notinterested {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 14px;
+  gap: 5px;
+  background: #fce8e8;
+  border-radius: 40px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: "Gilroy-SemiBold";
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  color: #d91a1a;
 }

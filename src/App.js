@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Screens/UserScreens/Login";
 import Signup from "./Screens/UserScreens/Signup";
 import Home from "./Screens/UserScreens/Home";
+import ViewAll from "./Screens/UserScreens/ViewAll";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/viewall" element={<ViewAll />} />
       </Routes>
     </div>
   );
