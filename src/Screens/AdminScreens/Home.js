@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getLeads } from '../../redux/actions/adminAction'
 import CSVReader from 'react-csv-reader';
+import Dashboard from './Dashboard/Dashboard';
 
-const Home = () => {
+const AdminHome = () => {
     const [data, setData] = useState([]);
 
     const dispatch = useDispatch()
@@ -21,49 +22,43 @@ const Home = () => {
     };
 
     return (
-        <div>
-            <CSVReader
-                cssClass="csv-reader-input"
-                label=""
-                onFileLoaded={handleFileUpload}
-                // onError={handleDarkSideForce}
-                // inputId="ObiWan"
-                // inputName="ObiWan"
-                inputStyle={{ color: 'red' }}
-                parserOptions={{ header: true }}
-            >
-                <button>Upload CSV File</button>
-            </CSVReader>
-            <table className='table table-striped mt-3'>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>EMail</th>
-                        <th>Phone Number</th>
-                        <th>Gender</th>
-                        <th>DOB</th>
-                        <th>Type</th>
-                        <th>Truck</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((row, index) => (
-                        <tr key={index}>
-                            <td>{row['Officer ID']}</td>
-                            <td>{row['Name']}</td>
-                            <td>{row['Email Address']}</td>
-                            <td>{row['Phone Number']}</td>
-                            <td>{row['Gender']}</td>
-                            <td>{row['DOB']}</td>
-                            <td>{row['Officer Type']}</td>
-                            <td>{row['Truck']}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <>
+        <div className='container'>
+              <div className='row'>
+                    <div className='col-12'>
+                        <div className='page-title-box'>
+                            <div className='page-title-right'></div>
+                            <div className='custom_navbar d-flex m-4'>
+                            <div  className='menu me-3'>Dashboard</div>
+                           <div className='menu me-3'>All leads</div>
+                           <div className='menu me-3'>Customer</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        
+        <div className='content-page position-relative' id="content" >
+      
+        <div className='content mb-xl-5'>
+            <div className='container-fluid'>
+               
+                <div className='row'>
+                   <Dashboard/>
+                   
+                </div>
+                <div className='row'>
+                  
+                </div>
+                <div className='row' style={{ marginBottom: "70px" }}>
+                   
+                </div>
+            </div>
         </div>
+        {/* <Footer /> */}
+    </div>
+    </div>
+    </>
     )
 }
 
-export default Home
+export default AdminHome
