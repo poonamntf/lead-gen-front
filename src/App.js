@@ -10,6 +10,8 @@ import AdminLogin from "./Screens/AdminScreens/Login";
 import Header from "./components/Header/Header";
 import Home from "./Screens/UserScreens/Home";
 import ViewAll from "./Screens/UserScreens/ViewAll";
+import ViewAll2 from "./Screens/AdminScreens/ViewAll2";
+import MyComponent from "./Screens/AdminScreens/ViewAll2Popup";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/viewall" element={<ViewAll />} />
+        <Route path="/viewall2" element={<ViewAll2></ViewAll2>}></Route>
+        <Route path="/sendinvite" element={<MyComponent></MyComponent>}></Route>
       </Routes>
     </div>
     </>

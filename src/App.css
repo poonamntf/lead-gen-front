@@ -760,3 +760,151 @@ th {
 .mt-4.row a {
   text-decoration: none;
 }
+
+
+/* view all2 */
+.booked1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 14px 13px 29px;
+  margin: 10px;
+  gap: 23px;
+  background: #b8fcd8;
+  border-radius: 40px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: "Gilroy-SemiBold";
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  color: #05703c;
+
+}
+.notinterested1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 14px;
+  gap: 5px;
+  background: #fce8e8;
+  border-radius: 40px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: "Gilroy-SemiBold";
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  color: #d91a1a;
+  margin: 10px;
+
+}
+
+.CardContainer{
+  background: #FFFFFF;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+margin-top:32px;
+border-radius: 11.3px;
+
+}
+.viewall2container{
+  padding: 20px;
+}
+.viewall2tablerow{
+  font-family: 'Gilroy-SemiBold';
+  font-size: 12px;
+}
+.viewall2carddiv{
+  display: flex;
+  padding:11px 26px;
+  text-align: center;
+}
+.viewall2h4{
+  margin-right: 175px;
+  font-family: 'Gilroy-Bold';
+font-size: 20px;
+line-height: 23px;
+display: inline;
+color: #5F65CE;
+}
+.viewall2btn1{
+  margin-right: 12px;
+  background-color: #5F65CE !important;
+}.viewall2search{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12.7636px 17.0182px 12.7636px 18.9091px;
+  gap: 110.62px;
+  
+  width: 304.44px;
+  height: 47.53px;
+  
+  background: #FFFFFF;
+  border: 0.8px solid #D6D7E9;
+  border-radius: 11.3455px;
+
+}
+.viewall2container1{
+  display: flex;
+  
+}
+.viewall2table{
+  text-align: center;
+}
+.viewall2btngrp{
+  text-align: right;
+  margin-left: 510px;
+}
+.viewall2model{
+margin-top: 200px;
+width: 400px !important;
+
+margin-left: 400px;
+}
+.viewall2sendinvite{
+  
+font-family: 'Gilroy-Bold';
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #5F65CE;
+
+}
+.viewall2email{
+  font-family: 'Gilroy-Bold';
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0.005em;
+color: #1F2937;
+margin-left: 20px;
+}
+.viewall2popupspan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 7.5px 4px 5px;
+  gap: 68.5px;
+  width: 433px;
+  height: 56px;
+  background: #FCFDFE;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+}
+.viewall2popupspan input{
+  display: flex;
+align-items: center;
+letter-spacing: 0.005em;
+border: none;
+font-family: 'Gilroy-SemiBold';
+font-size: 14px;
+line-height: 24px;
+}
