@@ -7,7 +7,7 @@ import SecondBlueDiv from "../../components/SecondBlueDiv";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-100">
       <Topbar />
       <MainContent />
       <Bluediv />

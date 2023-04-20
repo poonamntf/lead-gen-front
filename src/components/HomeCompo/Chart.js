@@ -3,67 +3,274 @@ import { CanvasJSChart } from "canvasjs-react-charts";
 import { useDispatch, useSelector } from "react-redux";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import newleads from "../../assets/newleads.png";
+import leadsbooked from "../../assets/leadsbooked.png";
+import profilepicture from "../../assets/profilepicture1.png";
 
 const Chart = ({ token }) => {
   const dispatch = useDispatch();
 
-  // const options = {
-  //     animationEnabled: true,
-  //     theme: "light1", // "light1", "dark1", "dark2"
-  //     toolTip: {
-  //         enabled: "true",
-  //         borderColor: "transparent",
-  //         backgroundColor: "#000000c2",
-  //         fontColor: "#fff",
-  //     },
-  //     data: [{
-  //         type: "pie",
-  //         indexLabel: "",
-  //         toolTipContent: "{legendText}: <strong>{y}</strong>",
-  //         startAngle: -90,
-  //         dataPoints: [
-  //             { y: 5, legendText: "Booked Leads", color: "#6658dd" },
-  //             { y: 6, legendText: "New Leads", color: "green" }
-  //         ]
-  //     }]
-  // }
+  const data = [
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "booked",
+    },
+    {
+      image: profilepicture,
+      name: "Mayur Tanwani",
+      email: "mayur.tanwani11@gmail.com",
+      phone: "8982106043",
+      status: "Not Interested",
+    },
+  ];
 
   return (
-    // <>
-    //     <div className="col-lg-4">
-    //         <h4 className="header-title mb-0 mt-3 ms-1">Merchant Type wise Requests</h4>
-    //         <div className="card-box mt-2">
-    //             <div className="widget-chart text-center" dir="ltr">
-    //                 <div className="mt-3 chartjs-chart">
-    //                     <CanvasJSChart options={options} containerProps={{ width: '100%', height: '300px' }} />
-    //                 </div>
+    <div>
+      <div className="d-flex flex-wrap justify-content-between circularbarmaindiv">
+        <div className="circularbardiv">
+          <div className="leadstats mt-3">Leads Stats</div>
+          <div className="circularbar mt-5">
+            <CircularProgressbarWithChildren
+              value={60}
+              strokeWidth={8}
+              styles={buildStyles({
+                pathColor: "#656AD0",
+                textColor: "#656AD0",
+              })}
+            >
+              <div className="totalleads">Total Leads</div>
+              <div className="totalleadsvalue">2500</div>
+            </CircularProgressbarWithChildren>
+          </div>
 
-    //                 <div className="row mt-3">
-    //                     <div className="col-6">
-    //                         <p className="text-muted mb-1 text-truncate">Booked Leads</p>
-    //                         {/* <h5>{typeWiseReq && typeWiseReq.merchantReq}</h5> */}
-    //                     </div>
-    //                     <div className="col-6">
-    //                         <p className="text-muted mb-1 text-truncate">New Leads</p>
-    //                         {/* <h5>{typeWiseReq && typeWiseReq.bankReq}</h5> */}
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </>
-    <div className="col-lg-4">
-      <div className="leadstats">Leads Stats</div>
-      <div className="circularbar">
-        <CircularProgressbar
-          strokeWidth={8}
-          styles={buildStyles({
-            pathColor: "#656AD0",
-            textColor: "#656AD0",
-          })}
-          value={60}
-          text={"Total leads \n 2500"}
-        />
+          <div className="d-flex justify-content-between mt-3 ps-5 pe-5">
+            <div>
+              <img src={leadsbooked} /> Leeds Booked
+            </div>
+            <div>
+              <img src={newleads} /> New Leads
+            </div>
+          </div>
+        </div>
+        <div className="d-flex  flex-column flex-wrap tablefromdashboard">
+          <div>
+            <div className="recentlyrecieved mt-3 mb-3">Recently Recieved</div>
+          </div>
+          <div className=" anothertablediv w-100">
+            <table className="mb-5 pb-5">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone No.</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {data &&
+                  data.slice(0, 4).map((item, i) => {
+                    return (
+                      <tr key={i}>
+                        <td>
+                          {" "}
+                          {<img src={item.image} />} {item.name}
+                        </td>
+                        <td>{item.email}</td>
+                        <td>{item.phone}</td>
+                        <td
+                          className={
+                            item.status == "booked" ? "booked" : "notinterested"
+                          }
+                        >
+                          {item.status}
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );

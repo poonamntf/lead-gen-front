@@ -367,8 +367,8 @@ p {
 
 .bloc-tabs {
   display: flex;
-  margin: 20px;
-  margin-left: 115px;
+  margin-left: 6%;
+  margin-top: 20px;
 }
 .tabs {
   padding: 5px;
@@ -574,9 +574,8 @@ label.sc-beqWaB.ewqTBN {
   margin: 10px;
 }
 .circularbar {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
-  font-size: 12px;
 }
 
 text.CircularProgressbar-text {
@@ -590,4 +589,174 @@ text.CircularProgressbar-text {
   text-transform: capitalize;
 
   color: #5f65ce;
+}
+
+.totalleads {
+  font-family: "Gilroy-Bold";
+  font-size: 1.125rem;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #7c81e4;
+}
+
+.totalleadsvalue {
+  font-family: "Gilroy-Bold";
+  font-size: 2.25rem;
+  line-height: 43px;
+  text-align: center;
+
+  color: #7c81e4;
+}
+
+.recentlyrecieved {
+  font-family: "Gilroy-Bold";
+  font-size: 26px;
+  line-height: 30px;
+  color: #5f65ce;
+  width: 300px;
+}
+
+.tablefromdashboard table {
+  width: 750px;
+}
+
+.tablefromdashboard table td {
+  padding: 5px;
+  align-items: center;
+  vertical-align: middle;
+}
+.tablefromdashboard {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+}
+
+.d-flex.flex-column.flex-wrap .tablefromdashboard {
+  overflow: auto;
+}
+
+.tablefromdashboard table td img {
+  margin-right: 20px;
+}
+
+.selectlist select.form-control.form-select {
+  width: 100%;
+}
+
+.createcontact {
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+
+  color: #5f65ce;
+}
+
+.modalform label.form-label {
+  font-family: "Gilroy-Bold";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: #1f2937;
+}
+
+.modalform input.form-control {
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 21px 2px 0px;
+  gap: 157px;
+  background: #fcfdfe;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #a0a0a0;
+}
+
+.modalform select.form-control.form-select {
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 21px 2px 0px;
+  gap: 157px;
+  background: #fcfdfe;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #a0a0a0;
+}
+
+.chooselist {
+  font-family: "Gilroy-Bold";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: #1f2937;
+}
+
+.submitbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 35.5px;
+  gap: 5px;
+
+  width: 111px;
+  height: 41px;
+
+  background: #5f65ce;
+  border-radius: 6px;
+}
+
+.submitbutton button.btn.btn-primary {
+  background: #5f65ce !important;
+  border: none;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+.tablediv {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.d-flex.flex-column.flex-wrap.tablefromdashboard {
+  overflow: auto;
+}
+
+.d-flex.flex-wrap.justify-content-between.circularbarmaindiv {
+  height: 260px;
+}
+
+.circularbardiv {
+  height: 250px;
+}
+
+.anothertablediv {
+  height: 250px;
+}
+
+.mt-4.row a {
+  text-decoration: none;
 }

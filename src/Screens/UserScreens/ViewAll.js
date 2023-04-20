@@ -14,7 +14,8 @@ import Chart from "../../components/HomeCompo/Chart";
 
 const ViewAll = () => {
   const [toggleState, setToggleState] = useState(1);
-  const [show, setShow] = useState(false);
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
   const fileTypes = ["XLSX", "CSV"];
   const [file, setFile] = useState(null);
   const data = [
@@ -213,17 +214,20 @@ const ViewAll = () => {
   };
 
   const handleClose = () => {
-    setShow(false);
+    setShowModal1(false);
+    setShowModal2(false);
     setFile(null);
   };
-  const handleShow = () => setShow(true);
+  const handleShow1 = () => setShowModal1(true);
+  const handleShow2 = () => setShowModal2(true);
+
   const toggleTab = (index) => {
     setToggleState(index);
   };
 
   return (
     <div>
-      <div className="bloc-tabs mb-5">
+      <div className="bloc-tabs ">
         <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
@@ -251,10 +255,10 @@ const ViewAll = () => {
             toggleState === 1 ? "content  active-content container" : "content"
           }
         >
-          <div className="mt-5 row">
+          <div className="mt-4 row">
             <Card />
           </div>
-          <div className="row">
+          <div>
             <Chart />
           </div>
         </div>
@@ -263,16 +267,16 @@ const ViewAll = () => {
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <div className=" w-100 dashboardmain">
-            <div className="dashboardmaintop mt-5 d-flex align-items-center justify-content-between">
+            <div className="dashboardmaintop mt-4 d-flex align-items-center justify-content-between">
               <div>
                 <img className="arrowimage" src={lessthan} />
                 Real Estate
               </div>
               <div>
-                <Button onClick={handleShow} className="importbutton">
+                <Button onClick={handleShow1} className="importbutton">
                   Import <img src={importpic} />
                 </Button>
-                <Button className="createcontactbutton">
+                <Button onClick={handleShow2} className="createcontactbutton">
                   Create Contact <img src={pluscircle} />{" "}
                 </Button>
               </div>
@@ -315,7 +319,7 @@ const ViewAll = () => {
               </table>
             </div>
           </div>
-          <Modal show={show} onHide={handleClose}>
+          <Modal show={showModal1} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Import</Modal.Title>
             </Modal.Header>
@@ -345,6 +349,52 @@ const ViewAll = () => {
                 <div className="importbuttonsecond">
                   <Button variant="primary" onClick={handleClose}>
                     Import
+                  </Button>
+                </div>
+              </Modal.Footer>
+            </Form>
+          </Modal>
+
+          <Modal show={showModal2} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title className="createcontact">
+                Create Contact
+              </Modal.Title>
+            </Modal.Header>
+            <Form className="modalform">
+              <Modal.Body>
+                <Form.Group className="mb-3">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Your Name" />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="Enter Your Email" />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control type="text" placeholder="Enter your number" />
+                </Form.Group>
+                <div className="chooselist">Choose List</div>
+                <div className="selectlist">
+                  <Form.Select
+                    name="language"
+                    className="form-control"
+                    aria-label="Language"
+                    required
+                  >
+                    <option value="">Choose List</option>
+                    <option value="english">Real Estate</option>
+                    <option value="hindi">Construction</option>
+                    <option value="english">Credit Card</option>
+                    <option value="hindi">Insurance</option>
+                  </Form.Select>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <div className="submitbutton">
+                  <Button variant="primary" onClick={handleClose} type="submit">
+                    Submit
                   </Button>
                 </div>
               </Modal.Footer>
