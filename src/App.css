@@ -211,6 +211,8 @@ p {
   color: #cacdf5;
   text-align: left;
   margin-left: 8%;
+  background-color: #7c81e4 !important;
+  position: inherit !important;
 }
 
 .whitedivleft img {
@@ -516,12 +518,14 @@ label.sc-beqWaB.ewqTBN {
 }
 
 .tablediv table {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .tablediv table td {
   padding: 10px;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .tablediv table td img {
@@ -534,6 +538,7 @@ label.sc-beqWaB.ewqTBN {
   justify-content: center;
   align-items: center;
   padding: 13px 14px 13px 29px;
+  margin: 10px;
   gap: 23px;
   background: #b8fcd8;
   border-radius: 40px;
@@ -566,4 +571,23 @@ label.sc-beqWaB.ewqTBN {
   align-items: center;
   text-align: center;
   color: #d91a1a;
+  margin: 10px;
+}
+.circularbar {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+text.CircularProgressbar-text {
+  font-size: 10px !important;
+}
+
+.leadstats {
+  font-family: "Gilroy-Bold";
+  font-size: 26px;
+  line-height: 30px;
+  text-transform: capitalize;
+
+  color: #5f65ce;
 }

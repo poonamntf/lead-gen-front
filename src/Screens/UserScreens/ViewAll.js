@@ -8,6 +8,10 @@ import { Form, Button } from "react-bootstrap";
 import { FileUploader } from "react-drag-drop-files";
 import profilepicture from "../../assets/profilepicture1.png";
 
+import "../AdminScreens/Dashboard/dashboard.css";
+import Card from "../../components/HomeCompo/Card";
+import Chart from "../../components/HomeCompo/Chart";
+
 const ViewAll = () => {
   const [toggleState, setToggleState] = useState(1);
   const [show, setShow] = useState(false);
@@ -243,8 +247,17 @@ const ViewAll = () => {
 
       <div className="content-tabs">
         <div
-          className={toggleState === 1 ? "content  active-content" : "content"}
-        ></div>
+          className={
+            toggleState === 1 ? "content  active-content container" : "content"
+          }
+        >
+          <div className="mt-5 row">
+            <Card />
+          </div>
+          <div className="row">
+            <Chart />
+          </div>
+        </div>
 
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
@@ -286,7 +299,15 @@ const ViewAll = () => {
                           </td>
                           <td>{item.email}</td>
                           <td>{item.phone}</td>
-                          <td>{item.status}</td>
+                          <td
+                            className={
+                              item.status == "booked"
+                                ? "booked"
+                                : "notinterested"
+                            }
+                          >
+                            {item.status}
+                          </td>
                         </tr>
                       );
                     })}
