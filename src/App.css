@@ -379,7 +379,7 @@ p {
   box-sizing: content-box;
   position: relative;
   outline: none;
-  margin: 0 30px;
+  margin: 0 2.2%;
   font-family: "Gilroy-SemiBold";
   font-size: 18px;
   line-height: 21px;
@@ -528,6 +528,12 @@ label.sc-beqWaB.ewqTBN {
   vertical-align: middle;
 }
 
+.tablediv table thead tr th {
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
 .tablediv table td img {
   margin-right: 20px;
 }
@@ -573,7 +579,7 @@ label.sc-beqWaB.ewqTBN {
   color: #d91a1a;
   margin: 10px;
 }
-<<<<<<< Updated upstream
+
 .circularbar {
   width: 40%;
   margin: 0 auto;
@@ -761,16 +767,39 @@ th {
 .mt-4.row a {
   text-decoration: none;
 }
-=======
->>>>>>> Stashed changes
-
 
 /* view all2 */
-.booked1{
+/* .booked1{ */
+
+.profiletitle {
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  color: #5f65ce;
+}
+
+/* Profile Picture popup start */
+
+.adminname {
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  line-height: 21px;
+
+  /* Grey/Grey 6 */
+
+  color: #5a6474;
+}
+
+.admintitle {
+  font-family: "Gilroy-SemiBold";
+  font-size: 16px;
+  line-height: 19px;
+  color: #757d8a;
+}
+
+.exportbutton {
   padding: 13px 14px 13px 29px;
   margin: 10px;
   gap: 23px;
@@ -785,13 +814,53 @@ th {
   align-items: center;
   text-align: center;
   color: #05703c;
-
 }
-.notinterested1{
+.notinterested1 {
+  padding: 10px;
+  gap: 7px;
+  width: 135px;
+  height: 42px;
+  background: #5f65ce !important;
+  border-radius: 9px;
+  font-family: "Gilroy-Bold";
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  width: 160px;
+  height: 42px;
+  border: none !important;
+}
+
+.exportbutton img {
+  padding-bottom: 14px;
+  margin-right: 10px;
+}
+
+.personal {
+  font-family: "Gilroy-Bold";
+  font-size: 20px;
+  line-height: 23px;
+  color: #5f65ce;
+}
+
+.adminformheading {
+  font-family: "Gilroy-Bold";
+  font-size: 20px;
+  line-height: 23px;
+  color: #5f65ce;
+}
+
+.adminsubmitbutton {
+  font-family: "Gilroy-Bold";
+  font-size: 12px;
+  line-height: 14px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
   padding: 13px 14px;
   gap: 5px;
   background: #fce8e8;
@@ -806,91 +875,86 @@ th {
   text-align: center;
   color: #d91a1a;
   margin: 10px;
-
 }
 
-.CardContainer{
-  background: #FFFFFF;
-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-margin-top:32px;
-border-radius: 11.3px;
-
+.CardContainer {
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 32px;
+  border-radius: 11.3px;
 }
-.viewall2container{
+.viewall2container {
   padding: 20px;
 }
-.viewall2tablerow{
-  font-family: 'Gilroy-SemiBold';
+.viewall2tablerow {
+  font-family: "Gilroy-SemiBold";
   font-size: 12px;
 }
-.viewall2carddiv{
+.viewall2carddiv {
   display: flex;
-  padding:11px 26px;
+  padding: 11px 26px;
   text-align: center;
 }
-.viewall2h4{
+.viewall2h4 {
   margin-right: 175px;
-  font-family: 'Gilroy-Bold';
-font-size: 20px;
-line-height: 23px;
-display: inline;
-color: #5F65CE;
+  font-family: "Gilroy-Bold";
+  font-size: 20px;
+  line-height: 23px;
+  display: inline;
+  color: #5f65ce;
 }
-.viewall2btn1{
+.viewall2btn1 {
   margin-right: 12px;
-  background-color: #5F65CE !important;
-}.viewall2search{
+  background-color: #5f65ce !important;
+}
+.viewall2search {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 12.7636px 17.0182px 12.7636px 18.9091px;
   gap: 110.62px;
-  
+
   width: 304.44px;
   height: 47.53px;
-  
-  background: #FFFFFF;
-  border: 0.8px solid #D6D7E9;
-  border-radius: 11.3455px;
 
+  background: #ffffff;
+  border: 0.8px solid #d6d7e9;
+  border-radius: 11.3455px;
 }
-.viewall2container1{
+.viewall2container1 {
   display: flex;
-  
 }
-.viewall2table{
+.viewall2table {
   text-align: center;
 }
-.viewall2btngrp{
+.viewall2btngrp {
   text-align: right;
   margin-left: 510px;
 }
-.viewall2model{
-margin-top: 200px;
-width: 400px !important;
+.viewall2model {
+  margin-top: 200px;
+  width: 400px !important;
 
-margin-left: 400px;
+  margin-left: 400px;
 }
-.viewall2sendinvite{
-  
-font-family: 'Gilroy-Bold';
-font-size: 24px;
-line-height: 28px;
-display: flex;
-align-items: center;
+.viewall2sendinvite {
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
 
-color: #5F65CE;
-
+  color: #5f65ce;
 }
-.viewall2email{
-  font-family: 'Gilroy-Bold';
-font-size: 18px;
-line-height: 21px;
-letter-spacing: 0.005em;
-color: #1F2937;
-margin-left: 20px;
+.viewall2email {
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+  color: #1f2937;
+  margin-left: 20px;
 }
-.viewall2popupspan{
+.viewall2popupspan {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -898,16 +962,129 @@ margin-left: 20px;
   gap: 68.5px;
   width: 433px;
   height: 56px;
-  background: #FCFDFE;
-  border: 1px solid #E5E7EB;
+  background: #fcfdfe;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
 }
-.viewall2popupspan input{
+.viewall2popupspan input {
   display: flex;
-align-items: center;
-letter-spacing: 0.005em;
-border: none;
-font-family: 'Gilroy-SemiBold';
-font-size: 14px;
-line-height: 24px;
+  align-items: center;
+  letter-spacing: 0.005em;
+  border: none;
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* padding: 13px 36.5px;
+  gap: 5px;
+
+  width: 113px;
+  height: 41px;
+
+  background-color: #5f65ce !important;
+  border-radius: 9px;
+} */
+
+button.btn.btn-primary {
+  background-color: #5f65ce !important;
+}
+
+button.importbutton.btn.btn-primary {
+  background: white !important;
+}
+
+.searchbar {
+  width: 20%;
+}
+
+.searchbar input[type="text"] {
+  border-radius: 20px;
+  padding: 8px 18px;
+  gap: 110.62px;
+  width: 300px;
+  background: #ffffff;
+  border: 0.8px solid #d6d7e9;
+  border-radius: 11.3455px;
+}
+
+select.form-control.industrycustomers.form-select {
+  width: 150px;
+}
+
+.topbarcustomers.d-flex.align-items-center.justify-content-between {
+  padding: 20px 11% !important;
+}
+
+select.form-control.industrycustomers.form-select {
+  width: 150px;
+  font-family: "Gilroy-Bold";
+  font-size: 14px;
+  line-height: 24px;
+  color: #5f65ce;
+}
+
+select.form-control.industrycustomers.form-select {
+  background: #f7f8ff;
+  border-radius: 10px;
+  border: 1px solid #5f65ce;
+  text-align: center;
+}
+
+.customerstable table {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Gilroy-SemiBold";
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+
+  color: #202020;
+}
+
+.customerstable {
+  overflow: auto;
+}
+
+.customerstable table tbody tr td {
+  text-align: left;
+  padding: 10px;
+}
+
+.customerstable table thead tr th {
+  text-align: left;
+  padding: 10px;
+}
+
+.customerName h4 {
+  font-family: "Gilroy-Bold";
+  font-size: 25px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #5f65ce;
+  margin-bottom: 0 !important;
+  margin-left: 15px;
+}
+
+.realestatetext {
+  font-family: "Gilroy-Bold";
+  font-size: 25px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+
+  color: #5f65ce;
+}
+
+button.demobutton.btn.btn-primary {
+  background: white !important;
+}
+
+.image.col-lg-6.col-md-6.col-sm-12.col-xs-12 {
+  padding-right: 0;
+}
+
+.dropdown-toggle::after {
+  margin-top: 0 !important;
 }
