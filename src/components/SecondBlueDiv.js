@@ -45,7 +45,7 @@ const SecondBlueDiv = () => {
         </div>
       </div>
 
-      <div className="footer mt-5 pb-2">
+      <div className="footer mt-3 pb-2">
         © 2000-2021, Squarespot All rights reserved
       </div>
     </div>

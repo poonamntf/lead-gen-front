@@ -5,7 +5,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Topbar = () => {
   return (
-    <Navbar expand="md" bg="light" variant="light">
+    <Navbar expand="md" variant="light" className="topbar-custom">
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="Logo" />

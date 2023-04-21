@@ -17,7 +17,7 @@ const WhiteDiv = () => {
           <Topbarbuttons />
         </div>
       </div>
-      <div className="d-flex flex-wrap justify-content-center whitedivleft">
+      <div className="d-flex flex-wrap justify-content-center whitedivleft pt-5">
         <img src={image} />
       </div>
     </div>

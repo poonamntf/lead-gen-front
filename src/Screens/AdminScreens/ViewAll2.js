@@ -66,8 +66,6 @@ const ViewAll2 = () => {
 
     return (
         <div className='mt-5 w-100'>
-
-
             <Container className='viewall2container1'>
                 <Row>
                     <Col >
@@ -83,8 +81,6 @@ const ViewAll2 = () => {
                         </Button>
                     </Col>
                 </Row>
-
-
             </Container>
 
             <Container className='viewall2container mt-3' >

@@ -89,7 +89,7 @@
 .textboxdiv {
   width: 70%;
   margin: 0 auto;
-  margin-top: 7rem !important;
+  margin-top: 10rem !important;
   margin-bottom: 4rem !important;
 }
 
@@ -188,10 +188,12 @@ p {
 .bottomdiv {
   width: 85%;
   margin: 0 auto;
+  border-bottom: 2px solid #9196f1;
+  padding-bottom: 40px;
 }
 
 .innerdiv {
-  width: 300px;
+  width: 370px;
   text-align: left;
 }
 
@@ -248,17 +250,15 @@ p {
   width: 60%;
 }
 
-.loginheadings h4 {
+.loginheadings h3 {
   font-family: "Gilroy-SemiBold";
-  font-size: 28px;
   line-height: 46px;
   letter-spacing: -0.02em;
   color: #5f65ce;
 }
 
-.loginheadings h5 {
+.loginheadings span {
   font-family: "Gilroy-SemiBold";
-  font-size: 28px;
   line-height: 46px;
   letter-spacing: -0.02em;
   color: black;
@@ -272,13 +272,15 @@ p {
   color: #272d37;
 }
 
-.loginforminnerdiv input {
+.loginforminnerdiv input#formBasicEmail,
+.loginforminnerdiv input#formBasicPassword {
   font-family: "Gilroy-Medium";
-  font-size: 12px;
+  font-size: 14px;
   line-height: 15px;
   align-items: center;
   letter-spacing: -0.1px;
-  color: #919ba7;
+  padding: 15px 16px;
+  border-radius: 10px;
 }
 
 .logindiv {
@@ -387,8 +389,6 @@ p {
 
   color: #7e7e80;
 }
-.tabs:not(:last-child) {
-}
 
 .active-tabs {
   background: white;
@@ -475,11 +475,9 @@ select.form-control.form-select {
   font-size: 14px;
   line-height: 24px;
   /* identical to box height, or 171% */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.005em;
-
   color: #a0a0a0;
   margin-top: 20px;
 }
@@ -513,6 +511,7 @@ label.sc-beqWaB.ewqTBN {
   background: #5f65ce;
   border-radius: 6px;
 }
+
 .tablediv {
   width: 100%;
 }
@@ -594,7 +593,6 @@ text.CircularProgressbar-text {
   font-size: 26px;
   line-height: 30px;
   text-transform: capitalize;
-
   color: #5f65ce;
 }
 
@@ -603,9 +601,7 @@ text.CircularProgressbar-text {
   font-size: 1.125rem;
   line-height: 21px;
   /* identical to box height */
-
   text-align: center;
-
   color: #7c81e4;
 }
 
@@ -614,7 +610,6 @@ text.CircularProgressbar-text {
   font-size: 2.25rem;
   line-height: 43px;
   text-align: center;
-
   color: #7c81e4;
 }
 
@@ -858,9 +853,7 @@ th {
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #ffffff;
-
   padding: 13px 14px;
   gap: 5px;
   background: #fce8e8;
@@ -1087,4 +1080,12 @@ button.demobutton.btn.btn-primary {
 
 .dropdown-toggle::after {
   margin-top: 0 !important;
+}
+
+.topbar-custom {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-box a {
+  text-decoration: none;
 }

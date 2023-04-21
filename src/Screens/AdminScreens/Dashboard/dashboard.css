@@ -220,13 +220,14 @@ select.form-control.form-select option {
 }
 
 .footer {
-  bottom: 0;
+  /* bottom: 0;
   padding: 19px 15px 20px;
   position: absolute;
   right: 0;
   color: #98a6ad;
   left: 0;
-  background-color: #eeeff3;
+  background-color: #eeeff3; */
+  color: #CACDF5;
 }
 .custom_table th,
 .custom_table td,

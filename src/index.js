@@ -6,6 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom'
 import store from './store';
 import { Provider } from 'react-redux';
+//for dropdown to work
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
