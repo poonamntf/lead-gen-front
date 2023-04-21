@@ -1,214 +1,22 @@
 import React from "react";
 import { useState } from "react";
-// import lessthan from "../../assets/lessthan.png";
-// import importpic from "../../assets/import.png";
-// import pluscircle from "../../assets/PlusCircle.png";
-// import Modal from "react-bootstrap/Modal";
-// import { Form, Button } from "react-bootstrap";
+import lessthan from "../../assets/lessthan.png";
+import importpic from "../../assets/import.png";
+import pluscircle from "../../assets/PlusCircle.png";
+import Modal from "react-bootstrap/Modal";
+import { Form, Button } from "react-bootstrap";
 // import { FileUploader } from "react-drag-drop-files";
-import profilepicture from "../../assets/profilepicture1.png";
-import "../AdminScreens/Dashboard/dashboard.css";
 import Card from "../../components/HomeCompo/Card";
 import Chart from "../../components/HomeCompo/Chart";
-import ViewAll2 from './ViewAll2'
+import AllLeads from "./AllLeads";
 import Customers from "../../components/Customers";
 
-const ViewAll = () => {
+const Dashboard = () => {
   const [toggleState, setToggleState] = useState(1);
   const [show, setShow] = useState(false);
   const fileTypes = ["XLSX", "CSV"];
   const [file, setFile] = useState(null);
-  const data = [
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "booked",
-    },
-    {
-      image: profilepicture,
-      name: "Mayur Tanwani",
-      email: "mayur.tanwani11@gmail.com",
-      phone: "8982106043",
-      status: "Not Interested",
-    },
-  ];
+
   const handleChange = (file) => {
     setFile(file);
   };
@@ -351,17 +159,17 @@ const ViewAll = () => {
               </Modal.Footer>
             </Form>
           </Modal> */}
-          <ViewAll2/>
+          <AllLeads />
         </div>
       </div>
 
       <div
         className={toggleState === 3 ? "content  active-content" : "content"}
       >
-        <Customers/>
+        <Customers />
       </div>
     </div>
   );
 };
 
-export default ViewAll;
+export default Dashboard;

@@ -9,31 +9,33 @@ import { adminLogin } from "../../redux/actions/adminAction";
 
 const Login = () => {
   const [loginCred, setLoginCred] = useState({
-    email: '',
-    password: ''
-  })
-  const dispatch = useDispatch()
+    email: "",
+    password: "",
+  });
+  const dispatch = useDispatch();
 
   const OnChangeHandler = (e) => {
-    setLoginCred({ ...loginCred, [e.target.name]: e.target.value })
-  }
+    setLoginCred({ ...loginCred, [e.target.name]: e.target.value });
+  };
 
   const OnSubmitHandler = (e) => {
-    e.preventDefault()
-    dispatch(adminLogin(loginCred))
+    e.preventDefault();
+    dispatch(adminLogin(loginCred));
     console.log("loginCred", loginCred);
-  }
-
+  };
 
   return (
     <div className="d-flex flex-wrap  vh-100 logindiv justify-content-center">
       <div className="loginleftdiv  justify-content-start col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-center flex-column">
         <div className="loginlogo  mt-4">
-          <img src={logo} alt="logo" className="img-responsive" />
+          <Link to="/">
+            <img src={logo} alt="logo" className="img-responsive" />
+          </Link>
         </div>
         <div className="d-flex flex-column columndiv justify-content-start align-items-center">
           <div className="loginheadings">
-            <h3>Welcome Back, Admin <br />
+            <h3>
+              Welcome Back, Admin <br />
               <span>Login To Your Account</span>
             </h3>
           </div>
@@ -41,9 +43,10 @@ const Login = () => {
             <Form onSubmit={OnSubmitHandler}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email"
+                <Form.Control
+                  type="email"
                   placeholder="Enter Your Email"
-                  name='email'
+                  name="email"
                   value={loginCred.email}
                   onChange={OnChangeHandler}
                   required
@@ -52,7 +55,8 @@ const Login = () => {
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password"
+                <Form.Control
+                  type="password"
                   placeholder="Password"
                   name="password"
                   value={loginCred.password}
@@ -74,9 +78,6 @@ const Login = () => {
                 Login
               </Button>
             </Form>
-            <div className="loginsignupdiv mt-3">
-              Don't have an account? <Link to="#">Sign up</Link>
-            </div>
           </div>
         </div>
       </div>
@@ -90,8 +91,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-

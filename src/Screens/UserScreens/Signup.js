@@ -1,48 +1,48 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import image from "../../assets/loginimage.png";
 import logo from "../../assets/logo.png";
-import { useDispatch } from 'react-redux'
-import { userRegister } from '../../redux/actions/userAction'
-
+import { useDispatch } from "react-redux";
+import { userRegister } from "../../redux/actions/userAction";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [userData, setUserData] = useState({
-    name: '',
-    email: '',
-    password: ''
-  })
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-
+    name: "",
+    email: "",
+    password: "",
+  });
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const OnChangeHandler = (e) => {
-    setUserData({ ...userData, [e.target.name]: e.target.value })
-  }
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
 
   const OnSubmitHandler = (e) => {
-    e.preventDefault()
-    dispatch(userRegister(userData, navigate))
+    e.preventDefault();
+    dispatch(userRegister(userData, navigate));
     setUserData({
-      name: '',
-      email: '',
-      password: ''
-    })
-  }
-
-
+      name: "",
+      email: "",
+      password: "",
+    });
+  };
 
   return (
     <div className="d-flex flex-wrap  vh-100 logindiv justify-content-center">
       <div className="loginleftdiv  justify-content-start col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-center flex-column">
         <div className="loginlogo  mt-4">
-          <img src={logo} className="img-responsive" alt="logo" />
+          <Link to="/">
+            <img src={logo} className="img-responsive" alt="logo" />
+          </Link>
         </div>
         <div className="d-flex flex-column columndiv justify-content-start align-items-center">
           <div className="loginheadings">
-            <h3>Welcome Back! <br />
+            <h3>
+              Welcome Back! <br />
               <span>Create a new Account</span>
             </h3>
           </div>
@@ -50,9 +50,10 @@ const Signup = () => {
             <Form onSubmit={OnSubmitHandler}>
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text"
+                <Form.Control
+                  type="text"
                   placeholder="Enter Your Name"
-                  name='name'
+                  name="name"
                   value={userData.name}
                   onChange={OnChangeHandler}
                 />
@@ -60,9 +61,10 @@ const Signup = () => {
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email"
+                <Form.Control
+                  type="email"
                   placeholder="Enter Your Email"
-                  name='email'
+                  name="email"
                   value={userData.email}
                   onChange={OnChangeHandler}
                 />
@@ -73,7 +75,7 @@ const Signup = () => {
                 <Form.Control
                   type="password"
                   placeholder="Enter Your Password"
-                  name='password'
+                  name="password"
                   value={userData.password}
                   onChange={OnChangeHandler}
                 />
@@ -84,7 +86,7 @@ const Signup = () => {
               </Button>
             </Form>
             <div className="loginsignupdiv mt-3">
-              Already have an account? <a href="#">Log in</a>
+              Already have an account? <Link to="/login">Log in</Link>
             </div>
           </div>
         </div>

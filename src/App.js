@@ -6,15 +6,15 @@ import Signup from "./Screens/UserScreens/Signup";
 import AdminLogin from "./Screens/AdminScreens/Login";
 import Header from "./components/Header/Header";
 import Home from "./Screens/UserScreens/Home";
-import ViewAll from "./Screens/AdminScreens/ViewAll";
+import Dashboard from "./Screens/AdminScreens/Dashboard";
 // import ViewAll2 from "./Screens/AdminScreens/ViewAll2";
 // import MyComponent from "./Screens/AdminScreens/ViewAll2Popup";
 import UserDashboard from "./Screens/UserScreens/UserDashboard";
 import "./App.css";
 
 const App = () => {
-  const adminLogin = useSelector((state) => state.adminLogin)
-  const { adminInfo } = adminLogin
+  const adminLogin = useSelector((state) => state.adminLogin);
+  const { adminInfo } = adminLogin;
 
   return (
     <>
@@ -22,8 +22,8 @@ const App = () => {
         <>
           <Header />
           <Routes>
-            <Route path="/" element={<ViewAll />} />
-            <Route path="/admin" element={<ViewAll />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/admin" element={<Dashboard />} />
           </Routes>
         </>
       ) : (
@@ -57,6 +57,6 @@ const App = () => {
         </Routes> */}
     </>
   );
-}
+};
 
 export default App;

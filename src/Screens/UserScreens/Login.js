@@ -7,25 +7,28 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const [LoginCred, setLoginCred] = useState({
-    email: '',
-    password: ''
-  })
+    email: "",
+    password: "",
+  });
   console.log("LoginCred", LoginCred);
 
   const OnChangeHandler = (e) => {
-    setLoginCred({ ...LoginCred, [e.target.name]: e.target.value })
-  }
+    setLoginCred({ ...LoginCred, [e.target.name]: e.target.value });
+  };
 
-  const OnSubmitHandler = (e) =>{
-    e.preventDefault()
-  }
+  const OnSubmitHandler = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="d-flex flex-wrap  vh-100 logindiv justify-content-center">
       <div className="loginleftdiv  justify-content-start col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-center flex-column">
         <div className="loginlogo  mt-4">
-          <img src={logo} className="img-responsive" alt="logo" />
+          <Link to="/">
+            <img src={logo} className="img-responsive" alt="logo" />
+          </Link>
         </div>
+
         <div className="d-flex flex-column columndiv justify-content-start align-items-center">
           <div className="loginheadings">
             <h4>Welcome Back!</h4>
@@ -35,9 +38,10 @@ const Login = () => {
             <Form onSubmit={OnSubmitHandler}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email"
+                <Form.Control
+                  type="email"
                   placeholder="Enter Your Email"
-                  name='email'
+                  name="email"
                   value={LoginCred.email}
                   onChange={OnChangeHandler}
                 />
@@ -45,9 +49,10 @@ const Login = () => {
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password"
+                <Form.Control
+                  type="password"
                   placeholder="Password"
-                  name='password'
+                  name="password"
                   value={LoginCred.password}
                   onChange={OnChangeHandler}
                 />
@@ -65,7 +70,7 @@ const Login = () => {
               </Button>
             </Form>
             <div className="loginsignupdiv mt-3">
-              Don't have an account? <a href="#">Sign up</a>
+              Don't have an account? <Link to="/signup">Sign up</Link>
             </div>
           </div>
         </div>
