@@ -21,7 +21,7 @@ const Error = (value) => {
 };
 
 
-export const userRegister = (obj) => async (dispatch) => {
+export const userRegister = (obj, navigate) => async (dispatch) => {
     try {
         dispatch({ type: USER_SIGNUP_REQUEST })
 
@@ -33,15 +33,17 @@ export const userRegister = (obj) => async (dispatch) => {
             payload: data.data
         })
 
-        if (data.status === 201) {
-            Success(data.message)
-        } else if (data.status === 403) {
+        if (data.statuscode === '201') {
+            Success(data.message).then(() => {
+                navigate('/login')
+            })
+        } else if (data.statuscode === '403') {
             Error(data.message)
-        } else if (data.status === 404) {
+        } else if (data.statuscode === '404') {
             Error(data.message)
-        } else if (data.status === 401) {
+        } else if (data.statuscode === '401') {
             Error(data.message)
-        } else if (data.status === 500) {
+        } else if (data.statuscode === '500') {
             Error(data.message)
         }
     } catch (error) {

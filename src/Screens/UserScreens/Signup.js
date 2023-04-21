@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import image from "../../assets/loginimage.png";
@@ -14,6 +15,7 @@ const Signup = () => {
     password: ''
   })
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
 
   const OnChangeHandler = (e) => {
@@ -22,8 +24,12 @@ const Signup = () => {
 
   const OnSubmitHandler = (e) => {
     e.preventDefault()
-    console.log("userData", userData);
-    dispatch(userRegister(userData))
+    dispatch(userRegister(userData, navigate))
+    setUserData({
+      name: '',
+      email: '',
+      password: ''
+    })
   }
 
 
@@ -36,7 +42,7 @@ const Signup = () => {
         </div>
         <div className="d-flex flex-column columndiv justify-content-start align-items-center">
           <div className="loginheadings">
-            <h3>Welcome Back! <br/>
+            <h3>Welcome Back! <br />
               <span>Create a new Account</span>
             </h3>
           </div>

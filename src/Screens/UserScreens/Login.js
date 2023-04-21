@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import image from "../../assets/loginimage.png";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [LoginCred, setLoginCred] = useState({
+    email: '',
+    password: ''
+  })
+  console.log("LoginCred", LoginCred);
+
+  const OnChangeHandler = (e) => {
+    setLoginCred({ ...LoginCred, [e.target.name]: e.target.value })
+  }
+
+  const OnSubmitHandler = (e) =>{
+    e.preventDefault()
+  }
+
   return (
     <div className="d-flex flex-wrap  vh-100 logindiv justify-content-center">
       <div className="loginleftdiv  justify-content-start col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-center flex-column">
         <div className="loginlogo  mt-4">
-          <img src={logo} />
+          <img src={logo} className="img-responsive" alt="logo" />
         </div>
         <div className="d-flex flex-column columndiv justify-content-start align-items-center">
           <div className="loginheadings">
@@ -17,23 +32,33 @@ const Login = () => {
             <h5>Login To Your Account</h5>
           </div>
           <div className="loginforminnerdiv mt-3">
-            <Form>
+            <Form onSubmit={OnSubmitHandler}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter Your Email" />
+                <Form.Control type="email"
+                  placeholder="Enter Your Email"
+                  name='email'
+                  value={LoginCred.email}
+                  onChange={OnChangeHandler}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control type="password"
+                  placeholder="Password"
+                  name='password'
+                  value={LoginCred.password}
+                  onChange={OnChangeHandler}
+                />
               </Form.Group>
               <div className="d-flex justify-content-between">
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Remember me" />
                 </Form.Group>
-                <a href="#" className="forgotpassword">
+                <Link to="#" className="forgotpassword">
                   Forgot Password?
-                </a>
+                </Link>
               </div>
               <Button variant="primary" type="submit">
                 Login
